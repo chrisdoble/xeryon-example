@@ -41,7 +41,10 @@ AUTO_SEND_ENBL = False
 NOT_SETTING_COMMANDS = ["DPOS", "EPOS", "HOME", "ZERO", "RSET", "INDX", "STEP", "MOVE", "STOP", "CONT", "SAVE", "STAT", "TIME", "SRNO", "SOFT", "XLA3", "XLA1", "XRT1", "XRT3", "XLS1", "XLS3", "SFRQ", "SYNC"]
 DEFAULT_POLI_VALUE = 200
 AMPLITUDE_MULTIPLIER = 1456.0
-PHASE_MULTIPLIER = 182
+
+# Changed from 182 as recommended by Xeryon to fix "Index is not found, but
+# stopped searching for index" errors.
+PHASE_MULTIPLIER = 1
 
 
 class Xeryon:
